@@ -1,0 +1,75 @@
+/**
+ * -------------------------------------------------------------
+ * Site header
+ * ------------------------------------------------------------- */
+
+.site__masthead {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	padding: 0.5em 0;
+	background-color: var(--col-page);
+	z-index: 100;
+}
+
+.site__masthead h1 {
+	@include font-size(18);
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding-bottom: 0;
+}
+
+.site__masthead nav ul {
+	display: flex;
+	@include no-bullets();	
+}
+
+.site__masthead nav li {
+	margin: 0 calc(var(--base) / 2) 0 0;
+}
+
+.site__masthead nav li a:hover {
+	color: var(--col-text-hover);
+}
+
+.current {
+	font-weight: 700;
+	border-bottom: 2px solid var(--col-text);
+}
+
+
+/* Narrow viewport
+ * ------------------------------------------------------------- */
+
+@media screen and ( max-width: 37.49em ) {
+	
+	.site__masthead h1 {
+		margin-bottom: 0.5em;
+	}
+	
+}
+
+/* Wider viewport
+ * ------------------------------------------------------------- */
+	
+@media screen and ( min-width: 37.5em ) {
+	
+	.site__masthead {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.site__masthead nav ul {
+		justify-content: center;
+	}
+
+	.site__masthead nav li {
+		margin: 0 0 0 calc(var(--base) / 2);
+	}
+	
+/*	.typeface .site__masthead + main {
+		margin-top: 	calc(var(--base) / 2);
+	}*/
+}
+

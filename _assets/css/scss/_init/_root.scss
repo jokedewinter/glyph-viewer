@@ -1,0 +1,33 @@
+/* ---------------------------- 
+ * Custom properties
+ * ---------------------------- */
+
+:root {
+
+    --base: 5.5em;
+
+	--font: 'Average', Helvetica, Arial, sans-serif;
+
+    --col-text: rgb(66, 67, 69); //#424345;			
+	--col-text-reverse: #fbfbf9;
+    --col-text-light: #A3A299;
+	--col-text-hover: #c8552b;
+	
+	--col-page: #fbfbf9;
+    --col-page-reverse: #424345;
+	--col-page-features: #F4F4F0;
+
+	--col-letter: #e7e6df;
+	--col-border: #e7e6df;
+	--col-hover: #f8f7f0;
+
+	--col-red: rgb(213, 91, 95);
+	--col-orange: rgb(224, 125, 81);
+	--col-yellow: rgb(237, 185, 102);
+	--col-green: rgb(155, 186, 125);
+	--col-teal: rgb(146, 202, 201);
+	--col-heather: rgb(137, 134, 164);
+	--col-blue: rgb(67, 74, 90);
+}
+
+

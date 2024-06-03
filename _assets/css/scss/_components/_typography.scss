@@ -1,0 +1,60 @@
+/**
+ * ------------------------------------------------------------- 
+ * Typography
+ * ------------------------------------------------------------- */
+
+* {
+	-webkit-hyphens: none;
+	-moz-hyphens: none !important;
+	hyphens: none;
+}
+
+h1 {
+	@include font-size(72);
+}
+
+h2 {
+    @include font-size(18);
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding-bottom: calc(var(--base) / 9);
+}
+
+h3 {
+	@include font-size(18);
+}
+
+p {
+    @include font-size(18);
+	padding-bottom: 9px;
+}
+
+ul {
+	padding-bottom: 9px;
+	padding-left: 1em;
+}
+
+/*
+ * Utility classes
+ * ------------------------------------------------------------- */
+
+.feature {
+	@include font-size(14);
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	//margin-top: 1em;
+	padding-top: 0.5em;
+	color: var(--col-text-light);
+}
+
+.feature span {
+	text-transform: none;
+	letter-spacing: 0px;
+}
+
+.blog h1 {
+	@include font-size(36);
+	padding-bottom: calc(36px/2);
+}

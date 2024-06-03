@@ -1,0 +1,61 @@
+/**
+ * -------------------------------------------------------------
+ * Site footer
+ * ------------------------------------------------------------- */
+
+.site__footer {
+	margin-top: calc(var(--base) * 2);
+}
+
+.site__footer article,
+.site__footer .footer__typefaces {
+	margin-bottom: calc(var(--base) / 2);
+}
+
+.footer__legal ul li {
+	@include list-with-stripes();
+}
+
+
+.footer__social ul {
+	display: flex;
+}
+.jokedewinter {    
+    display: flex;
+    justify-content: flex-end;
+    margin: calc(var(--base) / 2) 0;
+}
+   
+.jokedewinter a {
+	width: 75px;
+	height: 30px;
+	text-indent: -999em;
+	display: block;
+	background: url('../images/jokedewinter.svg');
+	border-bottom: none;
+}
+
+/* Wider viewport
+ * ------------------------------------------------------------- */
+
+@media screen and ( min-width: 37.5em ) {
+	
+	.site__footer {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		grid-column-gap: 2em;
+	}
+	
+	.site__footer > *:not(.footer__typefaces):not(.jokedewinter) {
+		grid-column: 1/4;
+	}
+	
+	.site__footer nav {
+		grid-column: 5/8;
+	}
+
+	.jokedewinter {
+		grid-column: 7/8;
+	}
+	
+}

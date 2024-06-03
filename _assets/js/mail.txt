@@ -1,0 +1,11 @@
+<script>
+    user = 'name';
+    site = 'domain';
+    document.write('<a href=\"mailto:' + user + '@' + site + '\">');
+    document.write(user + '@' + site + '</a>');
+</script>
+<script>
+adress = 'mailt' + 'o:MikeM' + 'yers@v' + 'wx.yz';
+document.getElementsByClassName('Email')[0].title = adress;
+function mail(){window.location.href = adress;}
+</script>

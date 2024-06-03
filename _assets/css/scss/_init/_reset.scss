@@ -1,0 +1,92 @@
+/**
+ * -------------------------------------------------------------
+ * Reset
+ * CSS Reset for minimalists
+ * Source: http://allthingssmitty.com/2017/01/09/css-reset-for-minimalists/
+ * ------------------------------------------------------------------------ */
+
+*,
+*:before,
+*:after { box-sizing: border-box;  }
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-text-size-adjust: 100%; 
+}
+
+
+button, fieldset, input, textarea, select, fieldset {
+	background: none;
+	border: none;
+	border-radius: 0px;
+	outline: 0;
+	//-webkit-appearance: none;
+}
+
+article, aside, footer, header, hgroup, main, nav, section { display: block; }
+nav ul, nav ol { @include no-bullets(); }
+
+
+button, fieldset, input, textarea, select, fieldset {
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: 0;
+	-webkit-appearance: none;
+	font-family: var(--font);
+}
+
+
+/* Accessibility
+ * ---------------------------- */
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	overflow: hidden;
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+}
+
+.screen-reader-text:focus {
+	background-color: var(--col-page-light);
+	border-radius: 3px;
+	clip: auto;
+	color: var(--col-text);
+	display: block;
+	font-size: 0.875em;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	height: auto;
+	line-height: normal;
+	padding: 0.7em 2em;
+	position: absolute;
+	left: 0.5em;
+	top: 0.5em;
+	text-decoration: none;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+	border-bottom: none;
+}
+
+/**
+ * -------------------------------------------------------------
+ * Support a widely-adopted but non-standard selector for text 
+ * selection styles to achieve a better experience. 
+ * See https://core.trac.wordpress.org/ticket/25898.
+ * -------------------------------------------------------------
+ */
+
+::selection {
+	background: var(--col-border);
+	color: inherit;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: var(--col-border);
+	color: inherit;
+	text-shadow: none;
+}

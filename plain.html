@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	
+    <title>Glyph Viewer</title>
+    <meta name="description" content="Detail view of every glyph in a font.">
+    
+	<link rel="stylesheet" href="_assets/css/screen.min.css">
+</head>
+
+<body>
+
+<h1>Glyph viewer	</h1>
+	
+<main class="module__glyphs verruckt-display regular">
+		
+	<figure class="glyph_box">
+		<!--
+		On page load display the first glyph.
+		After that, the thumbnail buttons do the work on hover.
+		-->
+		<div id="glyph" class="verruckt-display regular">A</div>
+	</figure>
+			
+	<section class="glyphs">
+		<h2>Glyphset</h2>
+		
+		<div class="scrolling">
+		<article>
+			<h3 class="feature">Uppercase</h3>
+			<a href="#" data-glyph="A">A</a> <a href="#" data-glyph="A">A</a> <a href="#" data-glyph="Á">Á</a>
+			<a href="#" 	data-glyph="Ă">Ă</a> <a href="#" data-glyph="Â">Â</a> <a href="#" data-glyph="Ä">Ä</a>
+			<a href="#" 	data-glyph="À">À</a> <a href="#" data-glyph="Ā">Ā</a> <a href="#" data-glyph="Ą">Ą</a>
+			<a href="#" 	data-glyph="Å">Å</a> <a href="#" data-glyph="Ã">Ã</a> <a href="#" data-glyph="Æ">Æ</a>
+			<a href="#" 	data-glyph="B">B</a> <a href="#" data-glyph="C">C</a> <a href="#" data-glyph="Ć">Ć</a>
+			<a href="#" 	data-glyph="Č">Č</a> <a href="#" data-glyph="Ç">Ç</a> <a href="#" data-glyph="Ċ">Ċ</a>
+			<a href="#" 	data-glyph="D">D</a> <a href="#" data-glyph="Ð">Ð</a> <a href="#" data-glyph="Ď">Ď</a>
+			<a href="#" 	data-glyph="Đ">Đ</a> <a href="#" data-glyph="E">E</a> <a href="#" data-glyph="É">É</a>
+			<a href="#" 	data-glyph="Ě">Ě</a> <a href="#" data-glyph="Ê">Ê</a> <a href="#" data-glyph="Ë">Ë</a>
+			<a href="#" 	data-glyph="Ė">Ė</a> <a href="#" data-glyph="È">È</a> <a href="#" data-glyph="Ē">Ē</a>
+			<a href="#" 	data-glyph="Ę">Ę</a> <a href="#" data-glyph="F">F</a> <a href="#" data-glyph="G">G</a> 
+			<a href="#" 	data-glyph="Ğ">Ğ</a> <a href="#" data-glyph="Ģ">Ģ</a> <a href="#" data-glyph="Ġ">Ġ</a>
+			<a href="#" 	data-glyph="H">H</a> <a href="#" data-glyph="Ħ">Ħ</a> <a href="#" data-glyph="I">I</a>
+			<a href="#" 	data-glyph="Í">Í</a> <a href="#" data-glyph="Î">Î</a> <a href="#" data-glyph="Ï">Ï</a>
+			<a href="#" 	data-glyph="İ">İ</a> <a href="#" data-glyph="Ì">Ì</a> <a href="#" data-glyph="Ī">Ī</a>
+			<a href="#" 	data-glyph="Į">Į</a> <a href="#" data-glyph="J">J</a> <a href="#" data-glyph="K">K</a>
+			<a href="#" 	data-glyph="Ķ">Ķ</a> <a href="#" data-glyph="L">L</a> <a href="#" data-glyph="Ĺ">Ĺ</a>
+			<a href="#" 	data-glyph="Ľ">Ľ</a> <a href="#" data-glyph="Ļ">Ļ</a> <a href="#" data-glyph="Ł">Ł</a>
+			<a href="#" 	data-glyph="M">M</a> <a href="#" data-glyph="N">N</a> <a href="#" data-glyph="Ń">Ń</a>
+			<a href="#" 	data-glyph="Ň">Ň</a> <a href="#" data-glyph="Ņ">Ņ</a> <a href="#" data-glyph="Ŋ">Ŋ</a>
+			<a href="#" 	data-glyph="Ñ">Ñ</a> <a href="#" data-glyph="O">O</a> <a href="#" data-glyph="Ó">Ó</a>
+			<a href="#" 	data-glyph="Ô">Ô</a> <a href="#" data-glyph="Ö">Ö</a> <a href="#" data-glyph="Ò">Ò</a>
+			<a href="#" 	data-glyph="Ő">Ő</a> <a href="#" data-glyph="Ō">Ō</a> <a href="#" data-glyph="Ø">Ø</a>
+			<a href="#" 	data-glyph="Õ">Õ</a> <a href="#" data-glyph="Œ">Œ</a> <a href="#" data-glyph="P">P</a>
+			<a href="#" 	data-glyph="Þ">Þ</a> <a href="#" data-glyph="Q">Q</a> <a href="#" data-glyph="R">R</a>
+			<a href="#" 	data-glyph="Ŕ">Ŕ</a> <a href="#" data-glyph="Ř">Ř</a> <a href="#" data-glyph="Ŗ">Ŗ</a>
+			<a href="#" 	data-glyph="S">S</a> <a href="#" data-glyph="Ś">Ś</a> <a href="#" data-glyph="Š">Š</a>
+			<a href="#" 	data-glyph="Ş">Ş</a> <a href="#" data-glyph="Ș">Ș</a> <a href="#" data-glyph="ẞ">ẞ</a>
+			<a href="#" 	data-glyph="T">T</a> <a href="#" data-glyph="Ŧ">Ŧ</a> <a href="#" data-glyph="Ť">Ť</a>
+			<a href="#" 	data-glyph="Ţ">Ţ</a> <a href="#" data-glyph="Ț">Ț</a> <a href="#" data-glyph="U">U</a>
+			<a href="#" 	data-glyph="Ú">Ú</a> <a href="#" data-glyph="Û">Û</a> <a href="#" data-glyph="Ü">Ü</a>
+			<a href="#" 	data-glyph="Ù">Ù</a> <a href="#" data-glyph="Ű">Ű</a> <a href="#" data-glyph="Ū">Ū</a>
+			<a href="#" 	data-glyph="Ų">Ų</a> <a href="#" data-glyph="Ů">Ů</a> <a href="#" data-glyph="V">V</a>
+			<a href="#" 	data-glyph="W">W</a> <a href="#" data-glyph="Ẃ">Ẃ</a> <a href="#" data-glyph="Ŵ">Ŵ</a>
+			<a href="#" 	data-glyph="Ẅ">Ẅ</a> <a href="#" data-glyph="Ẁ">Ẁ</a> <a href="#" data-glyph="X">X</a>
+			<a href="#" 	data-glyph="Y">Y</a> <a href="#" data-glyph="Ý">Ý</a> <a href="#" data-glyph="Ŷ">Ŷ</a>
+			<a href="#" 	data-glyph="Ÿ">Ÿ</a> <a href="#" data-glyph="Ỳ">Ỳ</a> <a href="#" data-glyph="Z">Z</a>
+			<a href="#" 	data-glyph="Ź">Ź</a> <a href="#" data-glyph="Ž">Ž</a> <a href="#" data-glyph="Ż">Ż</a>	
+		</article>
+		<article>
+			<h3 class="feature">Lowercase</h3>
+			<a href="#" 	data-glyph="a">a</a> <a href="#" data-glyph="á">á</a> <a href="#" data-glyph="ă">ă</a>
+			<a href="#" 	data-glyph="â">â</a> <a href="#" data-glyph="ä">ä</a> <a href="#" data-glyph="à">à</a>
+			<a href="#" 	data-glyph="ā">ā</a> <a href="#" data-glyph="ą">ą</a> <a href="#" data-glyph="å">å</a>
+			<a href="#" 	data-glyph="ã">ã</a> <a href="#" data-glyph="æ">æ</a> <a href="#" data-glyph="b">b</a>
+			<a href="#" 	data-glyph="c">c</a> <a href="#" data-glyph="ć">ć</a> <a href="#" data-glyph="č">č</a>
+			<a href="#" 	data-glyph="ç">ç</a> <a href="#" data-glyph="ċ">ċ</a> <a href="#" data-glyph="d">d</a>
+			<a href="#" 	data-glyph="ð">ð</a> <a href="#" data-glyph="ď">ď</a> <a href="#" data-glyph="đ">đ</a>
+			<a href="#" 	data-glyph="e">e</a> <a href="#" data-glyph="é">é</a> <a href="#" data-glyph="ě">ě</a>
+			<a href="#" 	data-glyph="ê">ê</a> <a href="#" data-glyph="ë">ë</a> <a href="#" data-glyph="ė">ė</a>
+			<a href="#" 	data-glyph="è">è</a> <a href="#" data-glyph="ē">ē</a> <a href="#" data-glyph="ę">ę</a>
+			<a href="#" 	data-glyph="f">f</a> <a href="#" data-glyph="g">g</a> <a href="#" data-glyph="ğ">ğ</a>
+			<a href="#" 	data-glyph="ģ">ģ</a> <a href="#" data-glyph="ġ">ġ</a> <a href="#" data-glyph="h">h</a>
+			<a href="#" 	data-glyph="ħ">ħ</a> <a href="#" data-glyph="i">i</a> <a href="#" data-glyph="ı">ı</a>
+			<a href="#" 	data-glyph="í">í</a> <a href="#" data-glyph="î">î</a> <a href="#" data-glyph="ï">ï</a>
+			<a href="#" 	data-glyph="ì">ì</a> <a href="#" data-glyph="ī">ī</a> <a href="#" data-glyph="į">į</a>
+			<a href="#" 	data-glyph="j">j</a> <a href="#" data-glyph="ȷ">ȷ</a> <a href="#" data-glyph="k">k</a>
+			<a href="#" 	data-glyph="ķ">ķ</a> <a href="#" data-glyph="l">l</a> <a href="#" data-glyph="ĺ">ĺ</a>
+			<a href="#" 	data-glyph="ľ">ľ</a> <a href="#" data-glyph="ļ">ļ</a> <a href="#" data-glyph="ł">ł</a>
+			<a href="#" 	data-glyph="m">m</a> <a href="#" data-glyph="n">n</a> <a href="#" data-glyph="ń">ń</a>
+			<a href="#" 	data-glyph="ň">ň</a> <a href="#" data-glyph="ņ">ņ</a> <a href="#" data-glyph="ŋ">ŋ</a>
+			<a href="#" 	data-glyph="ñ">ñ</a> <a href="#" data-glyph="o">o</a> <a href="#" data-glyph="ó">ó</a>
+			<a href="#" 	data-glyph="ô">ô</a> <a href="#" data-glyph="ö">ö</a> <a href="#" data-glyph="ò">ò</a>
+			<a href="#" 	data-glyph="ő">ő</a> <a href="#" data-glyph="ō">ō</a> <a href="#" data-glyph="ø">ø</a>
+			<a href="#" 	data-glyph="õ">õ</a> <a href="#" data-glyph="œ">œ</a> <a href="#" data-glyph="p">p</a> 
+			<a href="#" 	data-glyph="þ">þ</a> <a href="#" data-glyph="q">q</a> <a href="#" data-glyph="r">r</a>
+			<a href="#" 	data-glyph="ŕ">ŕ</a> <a href="#" data-glyph="ř">ř</a> <a href="#" data-glyph="ŗ">ŗ</a>
+			<a href="#" 	data-glyph="s">s</a> <a href="#" data-glyph="ś">ś</a> <a href="#" data-glyph="š">š</a>
+			<a href="#" 	data-glyph="ş">ş</a> <a href="#" data-glyph="ș">ș</a> <a href="#" data-glyph="ß">ß</a> 
+			<a href="#" 	data-glyph="t">t</a> <a href="#" data-glyph="ŧ">ŧ</a> <a href="#" data-glyph="ť">ť</a>
+			<a href="#" 	data-glyph="ţ">ţ</a> <a href="#" data-glyph="ț">ț</a> <a href="#" data-glyph="u">u</a>
+			<a href="#" 	data-glyph="ú">ú</a> <a href="#" data-glyph="û">û</a> <a href="#" data-glyph="ü">ü</a>
+			<a href="#" 	data-glyph="ù">ù</a> <a href="#" data-glyph="ű">ű</a> <a href="#" data-glyph="ū">ū</a>
+			<a href="#" 	data-glyph="ų">ų</a> <a href="#" data-glyph="ů">ů</a> <a href="#" data-glyph="v">v</a> 
+			<a href="#" 	data-glyph="w">w</a> <a href="#" data-glyph="ẃ">ẃ</a> <a href="#" data-glyph="ŵ">ŵ</a>
+			<a href="#" 	data-glyph="ẅ">ẅ</a> <a href="#" data-glyph="ẁ">ẁ</a> <a href="#" data-glyph="x">x</a> 
+			<a href="#" 	data-glyph="y">y</a> <a href="#" data-glyph="ý">ý</a> <a href="#" data-glyph="ŷ">ŷ</a>
+			<a href="#" 	data-glyph="ÿ">ÿ</a> <a href="#" data-glyph="ỳ">ỳ</a> <a href="#" data-glyph="z">z</a>
+			<a href="#" 	data-glyph="ź">ź</a> <a href="#" data-glyph="ž">ž</a> <a href="#" data-glyph="ż">ż</a>
+		</article>
+		<!--
+		<article>
+			<h3 class="feature">Small Caps</h3>
+		</article>
+		<article>
+			<h3 class="feature">Punctuation &amp; Symbols</h3>
+			<p>.,:;…!¡?¿·•*#/\(){}[]-–—_‚„“”‘’«»‹›"'@&amp;</p>
+			<p>+−×÷=≠><≥≤±≈~¬^∅∞∫∏∑√∂%‰</p>
+		</article>
+		<article>
+			<h3 class="feature">Figures (default)</h3><p>0123456789</p>
+		</article>
+		<article>
+			<h3 class="feature">Other figures</h3>
+		</article>
+		<article>
+			<h3 class="feature">Currency</h3><p>¢¤$€£¥</p>
+		</article>
+		<article>
+			<h3 class="feature">Superscript</h3><p>⁰¹²³⁴⁵⁶⁷⁸⁹</p>
+		</article>
+		<article>
+			<h3 class="feature">Subscript</h3><p>₀₁₂₃₄₅₆₇₈₉</p>
+		</article>
+		<article>
+			<h3 class="feature">Fractions</h3><p>½¼¾⅛⅜⅝⅞</p>
+		</article>
+		<article>
+			<h3 class="feature">Additional symbols</h3><p>↑↗→↘↓↙←↖↔↕◊¶§©®™°|¦†‡</p>
+		</article>
+		<article>
+			<h3 class="feature">Ligatures</h3>
+		</article>
+		<article>
+			<h3 class="feature">Alternates</h3>
+		</article>
+		-->
+		</div>
+	</section>	
+</main>
+
+<footer class="site__footer">
+        
+    <p>&copy; 2022-2024 Spilling Type. All Rights Reserved.</p>
+	<p class="jokedewinter"><a href="https://www.jokedewinter.co.uk" rel="me">Made by Joke De Winter</a></p>
+	
+</footer>
+
+<script src="_assets/js/jdw-glyphviewer.js"></script>
+
+</body>
+</html>
+
+
+
+
+

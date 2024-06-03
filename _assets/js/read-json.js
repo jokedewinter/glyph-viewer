@@ -44,6 +44,8 @@ for ( var i = 0; i < charset.length; i++ ) {
 	list.push('</article>');	
 }
 
+console.log(list);
+
 document.getElementById('glyphs').innerHTML = list.join('');
 window.scroll({top: 0, left: 0, behavior: 'smooth'});
 

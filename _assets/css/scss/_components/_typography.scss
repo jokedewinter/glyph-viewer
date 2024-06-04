@@ -35,6 +35,14 @@ ul {
 	padding-left: 1em;
 }
 
+@media screen and ( max-width: 37.49em ) {
+	
+	h1 {
+		@include font-size(36);
+		margin-bottom: 1em;
+	}
+}
+
 /*
  * Utility classes
  * ------------------------------------------------------------- */

@@ -55,23 +55,55 @@ function chooseFont() {
 	document.getElementById("glyph").style.fontWeight = chosenFont;
 }
 
+function showGlyph(event) {
+	// Prevent the default action            
+	event.preventDefault(); 
+    // Get the data-glyph attribute
+    var current = this.getAttribute('data-glyph');
+	// Collect the element to display the glyph
+	var glyph = document.getElementById('glyph');
+	// Show requested glyph
+	glyph.innerHTML = current;
+}
 
 // Listen for button hovers
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.glyphs a').forEach(function(anchor) {
 		
-        anchor.addEventListener('mouseover', function(event) {
+			/*
+			anchor.addEventListener('touchstart', function(event) {
+				// Prevent the default action            
+				event.preventDefault(); 
+			    // Get the data-glyph attribute
+			    var current = this.getAttribute('data-glyph');
+				// Collect the element to display the glyph
+				var glyph = document.getElementById('glyph');
+				// Show requested glyph
+				glyph.innerHTML = current;
+			});
+			*/
+			
+			anchor.addEventListener('mouseover', function(event) {		
+				// Prevent the default action            
+				event.preventDefault(); 
+	            // Get the data-glyph attribute
+	            var current = this.getAttribute('data-glyph');
+	            // Collect the element to display the glyph
+	            var glyph = document.getElementById('glyph');
+	            // Show requested glyph
+				glyph.innerHTML = current;
+			});
+
+		/*
+		function showGlyph(event) {
+		  // Your code here
+		}
 		
-			// Prevent the default action            
-			event.preventDefault(); 
-            // Get the data-glyph attribute
-            var current = this.getAttribute('data-glyph');
-            // Collect the element to display the glyph
-            var glyph = document.getElementById('glyph');
-            // Show requested glyph
-			glyph.innerHTML = current;
-        });
-    });
+		anchor.addEventListener('mouseover', showGlyph);
+		anchor.addEventListener('touchstart', showGlyph);
+		*/
+
+	});
 
 });
 

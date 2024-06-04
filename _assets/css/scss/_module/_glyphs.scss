@@ -3,12 +3,30 @@
  * Glyphs
  * ------------------------------------------------------------- */
 
-.module__glyphs {
-    display: grid;
-    grid-template-columns: 500px 2fr;
-    padding: calc(var(--base) / 2) 0;
+
+@media screen and ( max-width: 37.49em ) { 
+
+	.glyph_box {
+		display: none;
+	}
+	
+	.module__glyphs {
+	
+	}
+	
+	.glyphs a:focus {
+		width: calc(100% - 0.3175em);
+		/*margin-right: 0.3175em;*/
+		@include font-size(150);
+		text-align: center;
+		line-height: 1.5;
+	}
+
 }
 
+.glyphs header {
+	margin-bottom: 0.3175em;
+}
 
 .glyphs a {
     border: 1px solid var(--col-border);
@@ -36,18 +54,35 @@
 	flex-direction: column;
 	overflow-x: auto;
 	overflow-y: auto;
-	height: 30em;
+	height: 25em;
 	padding-bottom: 0.5em;
+	margin-bottom: 2em;
 }
+
+
+
+@media screen and ( min-width: 37.50em ) { 
+
+	.module__glyphs {
+	    display: grid;
+	    grid-template-columns: 500px 2fr;
+	    padding: calc(var(--base) / 2) 0;
+	}
+
+	.glyphs header {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.scrolling {
+		height: 30em;
+	}
+}
+
 
 /* Select box 
  * ------------------------------------------------------------- */
 
-.glyphs header {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 0.3175em;
-}
 
 select {
     @include font-size(18);

@@ -14,7 +14,9 @@
 	
 	}
 	
-	.glyphs a:focus {
+	.glyphs a:active
+	.glyphs a:focus,
+	.glyphs a:target {
 		width: calc(100% - 0.3175em);
 		/*margin-right: 0.3175em;*/
 		@include font-size(150);
@@ -22,6 +24,20 @@
 		line-height: 1.5;
 	}
 
+	.glyphs a:focus {
+		background-color: blue;
+		color: yellow;
+	}
+
+	.glyphs a:focus {
+		background-color: peru;
+		color: blue;
+	}
+
+	.glyphs a:focus {
+		background-color: black;
+		color: white;
+	}
 }
 
 .glyphs header {

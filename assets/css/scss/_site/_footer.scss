@@ -4,7 +4,9 @@
  * ------------------------------------------------------------- */
 
 .site__footer {
-	margin-top: calc(var(--base) * 2);
+	margin-top: 1em;
+	padding-top: 1em;
+	border-top: 1px solid var(--col-border);
 }
 
 .site__footer article,

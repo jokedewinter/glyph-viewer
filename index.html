@@ -26,7 +26,17 @@
 	</figure>
 			
 	<section class="glyphs">
-		<h2>Glyphset</h2>
+		<header>
+			<h2>Glyphset</h2>
+            <select id="selectFont" onchange="chooseFont()">
+                <option value="300">Bloody Pandora Light</option>
+                <option value="400" selected>Bloody Pandora Regular</option>
+                <option value="500">Bloody Pandora Medium</option>
+                <option value="700">Bloody Pandora Bold</option>
+                <option value="900">Bloody Pandora Black</option>
+            </select>
+        </header>
+
 		
 		<div id="glyphs" class="scrolling">
 		</div>

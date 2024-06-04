@@ -13,7 +13,7 @@
 .glyphs a {
     border: 1px solid var(--col-border);
     padding: 0 0.3175em;
-    margin: 0.13755em 0;
+    margin: 0.13755em;
     line-height: 2.1;
     width: 2em;
     display: inline-block;
@@ -40,9 +40,29 @@
 	padding-bottom: 0.5em;
 }
 
+/* Select box 
+ * ------------------------------------------------------------- */
+
+.glyphs header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.3175em;
+}
+
+select {
+    @include font-size(18);
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='232E38' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: 1px solid var(--col-border);
+    border-radius: 3px;
+    padding: 0.5em 2em 0.5em 0.5em;
+}
 
 
-/* Horizontal scrollbar 
+/* Vertical scrollbar 
  * ------------------------------------------------------------- */
 	         
 .scrolling::-webkit-scrollbar {

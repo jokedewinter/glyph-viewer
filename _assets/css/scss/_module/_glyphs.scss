@@ -36,8 +36,12 @@
     width: 2em;
     display: inline-block;
     text-align: center;
+	cursor: pointer;
 }
 
+body {
+	cursor: pointer;
+}
 
 .glyph_box {
 	padding: 0 var(--base);

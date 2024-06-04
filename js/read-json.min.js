@@ -70,7 +70,6 @@ function showGlyph(event) {
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.glyphs a').forEach(function(anchor) {
 		
-			/*
 			anchor.addEventListener('touchstart', function(event) {
 				// Prevent the default action            
 				event.preventDefault(); 
@@ -81,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
 				// Show requested glyph
 				glyph.innerHTML = current;
 			});
-			*/
-			
+
+
 			anchor.addEventListener('mouseover', function(event) {		
 				// Prevent the default action            
 				event.preventDefault(); 
@@ -104,6 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		*/
 
 	});
+	
+	
 
 });
 

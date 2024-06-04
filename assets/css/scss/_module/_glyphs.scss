@@ -3,43 +3,6 @@
  * Glyphs
  * ------------------------------------------------------------- */
 
-
-@media screen and ( max-width: 37.49em ) { 
-
-	.glyph_box {
-		display: none;
-	}
-	
-	.module__glyphs {
-	
-	}
-	
-	.glyphs a:active
-	.glyphs a:focus,
-	.glyphs a:target {
-		width: calc(100% - 0.3175em);
-		/*margin-right: 0.3175em;*/
-		@include font-size(150);
-		text-align: center;
-		line-height: 1.5;
-	}
-
-	.glyphs a:focus {
-		background-color: blue;
-		color: yellow;
-	}
-
-	.glyphs a:focus {
-		background-color: peru;
-		color: blue;
-	}
-
-	.glyphs a:focus {
-		background-color: black;
-		color: white;
-	}
-}
-
 .glyphs header {
 	margin-bottom: 0.3175em;
 }
@@ -74,12 +37,42 @@ body {
 	flex-direction: column;
 	overflow-x: auto;
 	overflow-y: auto;
-	height: 25em;
+	height: 20em;
 	padding-bottom: 0.5em;
 	margin-bottom: 2em;
 }
 
+@media screen and ( max-width: 37.49em ) { 
 
+	.glyph_box {
+		display: none;
+	}
+	
+	.glyphs a:active
+	.glyphs a:focus,
+	.glyphs a:target {
+		width: calc(100% - 0.3175em);
+		/*margin-right: 0.3175em;*/
+		@include font-size(150);
+		text-align: center;
+		line-height: 1.5;
+	}
+
+	.glyphs a:focus {
+		background-color: blue;
+		color: yellow;
+	}
+
+	.glyphs a:focus {
+		background-color: peru;
+		color: blue;
+	}
+
+	.glyphs a:focus {
+		background-color: black;
+		color: white;
+	}
+}
 
 @media screen and ( min-width: 37.50em ) { 
 

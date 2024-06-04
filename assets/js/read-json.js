@@ -36,7 +36,7 @@ for ( var i = 0; i < charset.length; i++ ) {
 		const character = unicodeValue; 
 		
 		if ( character ) {
-			list.push('<a href="#" data-glyph="' + character + '">' + character + '</a>');
+			list.push('<a id="' + character + '" href="#' + character + '" data-glyph="' + character + '">' + character + '</a>');
 		}
 	}
 	

@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.glyphs a').forEach(function(anchor) {
 		
 		anchor.addEventListener('mouseover', showGlyph);
-		anchor.addEventListener('touchstart', showGlyph);
+		anchor.addEventListener('mouseclick', showGlyph);
 
 	});	
 });

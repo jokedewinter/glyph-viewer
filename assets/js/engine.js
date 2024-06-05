@@ -6,12 +6,6 @@ Author URI: https://www.jokedewinter.co.uk
 Version: 1.0
 */
 
-// Convert unicode to glyph
-// The unicode value is UTF-8, but String.fromCharCode uses UTF-16.
-// The parseInt section converts the unicode from 8 to 16 
-// The result is the correct glyph
-
-
 // Read the charset
 var charset = charset;
 var list = new Array();
@@ -28,11 +22,20 @@ for ( var i = 0; i < charset.length; i++ ) {
 	for ( j = 0; j < chars.length; j++ ) {
 		
 		const unicodeValue = chars[j];
+
+		/*
+		 * Use this if the json file has unicode values
+		 * using the UTF-16 format */
+		//const character = String.fromCharCode(unicodeValue);	
 		
-		// Use this if the json file has unicode values
+		/*
+		 * Use this if the json file has unicode values
+		 * using the UTF-8 format */
 		//const character = String.fromCharCode(parseInt(unicodeValue, 16));		
 
-		// Use this if the json file has string values
+		/*
+		 * Use this if the json file has either string values
+		 * or unicodes from string values */
 		const character = unicodeValue; 
 		
 		if ( character ) {

@@ -1,7 +1,7 @@
 /**
- * ------------------------------------------------ 
+ * ---------------------------------
  * Links
- * ------------------------------------------------ */
+ * --------------------------------- */
 
 a {
     color: inherit;
@@ -10,14 +10,6 @@ a {
     cursor: pointer;
 }
 
-
-.link {
-	font-weight: bold;
-}
-
-a:hover,
-.link:hover {
-	color: var(--col-text-hover);
-}
+a:hover { color: var(--col-text-hover); }
 
 

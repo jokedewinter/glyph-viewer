@@ -1,7 +1,7 @@
 /**
- * -------------------------------------------------------------
+ * ---------------------------------
  * Glyphs
- * ------------------------------------------------------------- */
+ * --------------------------------- */
 
 .glyphs header {
 	margin-bottom: 0.3175em;
@@ -48,26 +48,13 @@ body {
 		display: none;
 	}
 	
-/*	.glyphs a:active
-	.glyphs a:focus,*/
 	.glyphs a:target {
 		width: calc(100% - 0.3175em);
-		/*margin-right: 0.3175em;*/
 		@include font-size(150);
 		text-align: center;
 		line-height: 1.5;
 		cursor: pointer;
 	}
-
-/*	.glyphs a:active {
-		background-color: blue;
-		color: yellow;
-	}
-
-	.glyphs a:focus {
-		background-color: peru;
-		color: blue;
-	}*/
 
 	.glyphs a:target {
 		background-color: black;
@@ -95,7 +82,7 @@ body {
 
 
 /* Select box 
- * ------------------------------------------------------------- */
+ * --------------------------------- */
 
 
 select {
@@ -112,7 +99,7 @@ select {
 
 
 /* Vertical scrollbar 
- * ------------------------------------------------------------- */
+ * --------------------------------- */
 	         
 .scrolling::-webkit-scrollbar {
     width: 5px;

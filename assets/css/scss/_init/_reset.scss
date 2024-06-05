@@ -1,5 +1,5 @@
 /**
- * -------------------------------------------------------------
+ * ---------------------------------
  * Reset
  * CSS Reset for minimalists
  * Source: http://allthingssmitty.com/2017/01/09/css-reset-for-minimalists/
@@ -41,7 +41,7 @@ button, fieldset, input, textarea, select, fieldset {
 
 
 /* Accessibility
- * ---------------------------- */
+ * --------------------------------- */
 
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -74,12 +74,11 @@ button, fieldset, input, textarea, select, fieldset {
 }
 
 /**
- * -------------------------------------------------------------
+ * --------------------------------- 
  * Support a widely-adopted but non-standard selector for text 
  * selection styles to achieve a better experience. 
  * See https://core.trac.wordpress.org/ticket/25898.
- * -------------------------------------------------------------
- */
+ * ------------------------------------------------------------ */
 
 ::selection {
 	background: var(--col-border);

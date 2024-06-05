@@ -3,36 +3,37 @@
  * Glyphs
  * --------------------------------- */
 
-.glyphs header {
-	margin-bottom: 0.3175em;
-}
+/* Single glyph
+ * --------------------------------- */
 
-.glyphs a {
-    border: 1px solid var(--col-border);
-    padding: 0 0.3175em;
-    margin: 0.13755em;
-    line-height: 2.1;
-    width: 2em;
-    display: inline-block;
-    text-align: center;
-	cursor: pointer;
-}
-
-body {
-	cursor: pointer;
-}
-
-.glyph_box {
-	padding: 0 var(--base);
-}
-
-
+.glyph { padding: 0 var(--base); }
+	
 #glyph {
 	@include font-size(360);
 	text-align: center;
+	line-height: 1.1;
 }
 
-.scrolling {
+@media screen and ( max-width: 37.50em ) { .glyph { display: none; } }
+
+
+/* Grid of glyphs
+ * --------------------------------- */
+
+.glyphs header { margin-bottom: 0.3175em; }
+
+.glyphs a {
+    display: inline-block;
+    width: 2em;
+    margin: 0.13755em;
+    padding: 0 0.3175em;
+    line-height: 2.1;
+    text-align: center;
+    border: 1px solid var(--col-border);
+	cursor: pointer;
+}
+
+.vscrolling {
 	display: flex;
 	flex-direction: column;
 	overflow-x: auto;
@@ -44,10 +45,6 @@ body {
 
 @media screen and ( max-width: 37.49em ) { 
 
-	.glyph_box {
-		display: none;
-	}
-	
 	.glyphs a:target {
 		width: calc(100% - 0.3175em);
 		@include font-size(150);
@@ -57,17 +54,16 @@ body {
 	}
 
 	.glyphs a:target {
-		background-color: black;
-		color: white;
+		background-color: var(--col-text);
+		color: var(--col-text-reverse);
 	}
 }
 
 @media screen and ( min-width: 37.50em ) { 
 
 	.module__glyphs {
-	    display: grid;
-	    grid-template-columns: 500px 2fr;
-	    padding: calc(var(--base) / 2) 0;
+	    display: flex;
+	    flex-direction: column;
 	}
 
 	.glyphs header {
@@ -75,8 +71,17 @@ body {
 		justify-content: space-between;
 	}
 	
-	.scrolling {
-		height: 30em;
+	.vscrolling { height: 20em; }
+
+}
+	
+@media screen and ( min-width: 64em ) { 
+
+	.module__glyphs {
+	    display: grid;
+	    grid-template-columns: minmax(28em, 1fr) 2fr;
+		grid-column-gap: calc(var(--base) / 2);
+	    padding: calc(var(--base) / 2) 0;
 	}
 }
 
@@ -84,14 +89,13 @@ body {
 /* Select box 
  * --------------------------------- */
 
-
 select {
     @include font-size(18);
     background: transparent;
-    background-image: url("data:image/svg+xml;utf8,<svg fill='232E38' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+	background-image: url(../images/triangle-down.svg);
     background-repeat: no-repeat;
     background-position-x: 100%;
-    background-position-y: 5px;
+    background-position-y: 9px;
     border: 1px solid var(--col-border);
     border-radius: 3px;
     padding: 0.5em 2em 0.5em 0.5em;
@@ -101,16 +105,16 @@ select {
 /* Vertical scrollbar 
  * --------------------------------- */
 	         
-.scrolling::-webkit-scrollbar {
+.vscrolling::-webkit-scrollbar {
     width: 5px;
     height: 5px;
 }
 	      
-.scrolling::-webkit-scrollbar-track { 
+.vscrolling::-webkit-scrollbar-track { 
     -webkit-box-shadow: inset 0 0 6px var(--col-border) !important; 
     background: var(--col-border); 
-} // The track
+} // Track
 	
-.scrolling::-webkit-scrollbar-thumb { background: var(--col-text); } // The handle
-.scrolling::-webkit-scrollbar-thumb:hover { background: var(--col-text-light); } // The handle on hover
-.scrolling::-webkit-scrollbar:horizontal { display: none; }
+.vscrolling::-webkit-scrollbar-thumb { background: var(--col-text); } // Handle
+.vscrolling::-webkit-scrollbar-thumb:hover { background: var(--col-text-light); } // Handle on hover
+.vscrolling::-webkit-scrollbar:horizontal { display: none; }

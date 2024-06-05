@@ -38,7 +38,7 @@ p {
 	
 	h1 {
 		@include font-size(36);
-		margin-bottom: 1em;
+		margin: 0.5em 0;
 	}
 }
 

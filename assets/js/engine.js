@@ -6,50 +6,51 @@ Author URI: https://www.jokedewinter.co.uk
 Version: 1.0
 */
 
-// Read the charset
+// Load the json file
 var charset = charset;
-var list = new Array();
 
-// Display the charset in category groups
+function create_glyph_grid() {
 
-for ( var i = 0; i < charset.length; i++ ) {
+	var list = new Array();
 	
-	list.push('<article>');
-	list.push('<h3>' + charset[i]['category'] + '</h3>');
+	// Display the glyphs in category groups
+	for ( var i = 0; i < charset.length; i++ ) {
+		
+		list.push('<article>');
+		list.push('<h3>' + charset[i]['category'] + '</h3>');
+		
+		var chars = charset[i]['chars'];		
+		
+		for ( j = 0; j < chars.length; j++ ) {
+			
+			const unicodeValue = chars[j];
 	
-	var chars = charset[i]['chars'];		
+			/*
+			 * Use this if the json file has unicode values
+			 * using the UTF-16 format */
+			//const character = String.fromCharCode(unicodeValue);	
+			
+			/*
+			 * Use this if the json file has unicode values
+			 * using the UTF-8 format */
+			//const character = String.fromCharCode(parseInt(unicodeValue, 16));		
 	
-	for ( j = 0; j < chars.length; j++ ) {
-		
-		const unicodeValue = chars[j];
-
-		/*
-		 * Use this if the json file has unicode values
-		 * using the UTF-16 format */
-		//const character = String.fromCharCode(unicodeValue);	
-		
-		/*
-		 * Use this if the json file has unicode values
-		 * using the UTF-8 format */
-		//const character = String.fromCharCode(parseInt(unicodeValue, 16));		
-
-		/*
-		 * Use this if the json file has either string values
-		 * or unicodes from string values */
-		const character = unicodeValue; 
-		
-		if ( character ) {
-			list.push('<a id="' + character + '" href="#' + character + '" data-glyph="' + character + '">' + character + '</a>');
+			/*
+			 * Use this if the json file has either string values
+			 * or unicodes from string values */
+			const character = unicodeValue; 
+			
+			if ( character ) {
+				list.push('<a id="' + character + '" href="#' + character + '" data-glyph="' + character + '">' + character + '</a>');
+			}
 		}
+		
+		list.push('</article>');	
 	}
 	
-	list.push('</article>');	
+	document.getElementById('glyphs').innerHTML = list.join('');
+	window.scroll({top: 0, left: 0, behavior: 'smooth'});
 }
-
-
-document.getElementById('glyphs').innerHTML = list.join('');
-window.scroll({top: 0, left: 0, behavior: 'smooth'});
-
 
 // Choose a different font
 function chooseFont() {
@@ -58,18 +59,15 @@ function chooseFont() {
 	document.getElementById("glyph").style.fontWeight = chosenFont;
 }
 
+// Display the chosen glyph
 function showGlyph(event) {
-	// Prevent the default action            
 	event.preventDefault(); 
-    // Get the data-glyph attribute
     var current = this.getAttribute('data-glyph');
-	// Collect the element to display the glyph
 	var glyph = document.getElementById('glyph');
-	// Show requested glyph
 	glyph.innerHTML = current;
 }
 
-// Listen for button hovers
+// Listen for button hovers/clicks
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.glyphs a').forEach(function(anchor) {
 		
@@ -79,3 +77,4 @@ document.addEventListener('DOMContentLoaded', function() {
 	});	
 });
 
+create_glyph_grid();

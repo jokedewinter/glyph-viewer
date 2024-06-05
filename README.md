@@ -24,14 +24,14 @@ I extracted mine from Glyphs App with some Python. Link will follow to the repos
 - `assets/js/glyph-viewer.js` 
 
 ### HTML
-- From the index.html file copy `<main class="module__glyphs">` to your file. Use a different HTML element instead of `main` if that suits your setup better.
+- From the index.html file copy the entire `<main class="module__glyphs">` block to your file. Use a different HTML element instead of `main` if that suits your setup better.
 - Include the CSS file: `<link rel="stylesheet" href="glyph-viewer.css">`
 - Include the json file: `<script src="glyphs.json"></script>`
 - Include the JavaScript file: `<script src="glyph-viewer.js"></script>`
 - Update the `select` element to include all the different fonts from your typeface, or remove it if you only have one font.
 
 ### JavaScript
-- The json file I am using is called `glyphs.json` and lives in `assets/js/`. If yours has a different filename in a different location, then remember to update name and link in `assets/js/glyph-viewer.js`. 
+- The json file I am using is called `glyphs.json` and lives in `assets/js/`. If yours has a different filename in a different location, then remember to update name and link in `glyph-viewer.js`. 
 
 
 Cobbled together with the help of a whole load of websites and view source. Thank you everyone. 

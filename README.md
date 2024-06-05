@@ -4,6 +4,8 @@ A website viewing tool for all the glyphs in a font file. It uses a json file wi
 
 It works on smaller viewports too, but there the chosen glyph opens up inline in the grid. On wide viewports it appears beside the grid.
 
+You can view it in action here: https://jokedewinter.github.io/glyph-viewer/
+
 ## Requirements
 
 A json file with unicodes divided into categories (uppercase, lowercase, figures, etc.).
@@ -36,6 +38,5 @@ I extracted mine from Glyphs App with some Python. Link will follow to the repos
 
 Cobbled together with the help of a whole load of websites and view source. Thank you everyone. 
 
-You can view it in action here: https://jokedewinter.github.io/glyph-viewer/
 
  

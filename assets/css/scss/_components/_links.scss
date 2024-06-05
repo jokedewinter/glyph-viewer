@@ -20,36 +20,4 @@ a:hover,
 	color: var(--col-text-hover);
 }
 
-.button {
-    position: relative;
-	display: inline-block;
-	margin: calc( var(--base) / 4 ) 0;
-    padding: 0.5em;
 
-	@include font-size(16);
-    font-weight: 700;
-	text-transform: uppercase;
-    letter-spacing: 1px;
-	background-color: var(--col-text);
-	color: var(--col-text-reverse);
-    border-radius: 5px;    
-}
-
-.button:hover {
-    background-color: var(--col-orange);
-}
-
-.button + .info {
-	margin-top: -1em;
-}
-
-
-/* Wider viewport
- * ------------------------------------------------------------- */
-
-@media screen and ( min-width: 37.50em ) {
-	
-	.button {
-		padding: 0.3em 2em 0.5em 2em;
-	}
-}

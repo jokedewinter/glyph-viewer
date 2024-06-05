@@ -21,11 +21,13 @@ button, fieldset, input, textarea, select, fieldset {
 	border: none;
 	border-radius: 0px;
 	outline: 0;
-	//-webkit-appearance: none;
+	-webkit-appearance: none;
 }
 
 article, aside, footer, header, hgroup, main, nav, section { display: block; }
-nav ul, nav ol { @include no-bullets(); }
+nav ul, nav ol { padding: 0; }
+nav ul li, nav ol li { list-style: none; }
+nav ul a, nav ol a { border-bottom: none; }
 
 
 button, fieldset, input, textarea, select, fieldset {

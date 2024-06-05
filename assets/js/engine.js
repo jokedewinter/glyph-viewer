@@ -15,7 +15,7 @@ var list = new Array();
 for ( var i = 0; i < charset.length; i++ ) {
 	
 	list.push('<article>');
-	list.push('<h3 class="feature">' + charset[i]['category'] + '</h3>');
+	list.push('<h3>' + charset[i]['category'] + '</h3>');
 	
 	var chars = charset[i]['chars'];		
 	

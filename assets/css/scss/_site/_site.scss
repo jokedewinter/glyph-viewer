@@ -24,6 +24,10 @@ body {
 
 body > * { position: relative; }
 
-
+.site__footer {
+	margin-top: 1em;
+	padding-top: 1em;
+	border-top: 1px solid var(--col-border);
+}
 
 

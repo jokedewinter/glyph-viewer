@@ -6,25 +6,42 @@ Author URI: https://www.jokedewinter.co.uk
 Version: 1.0
 */
 
-// Load the json file
-var charset = charset;
+// Kick off the fun
+fetch_json();
 
-function create_glyph_grid() {
+
+// Fetches the json file and sets up the event listener
+function fetch_json() {
+
+	let response_promise = fetch("./assets/js/glyphs.json");
+	document.addEventListener("DOMContentLoaded", function() {
+		response_promise
+			.then(response => response.json()
+			.then(data => {
+				create_glyph_grid(data);
+				document.querySelectorAll(".glyphs a").forEach(function(anchor) {
+					anchor.addEventListener("mouseover", showGlyph);
+					anchor.addEventListener("mouseclick", showGlyph);
+				});	
+		}))
+	}, false)
+
+}
+
+
+// Use the json data to create the glyph grid
+function create_glyph_grid(data) {
 
 	var list = new Array();
 	
 	// Display the glyphs in category groups
-	for ( var i = 0; i < charset.length; i++ ) {
-		
+	for ( var i = 0; i < data.length; i++ ) {
 		list.push('<article>');
-		list.push('<h3>' + charset[i]['category'] + '</h3>');
-		
-		var chars = charset[i]['chars'];		
+		list.push('<h3>' + data[i]['category'] + '</h3>');
+		var chars = data[i]['chars'];		
 		
 		for ( j = 0; j < chars.length; j++ ) {
-			
 			const unicodeValue = chars[j];
-	
 			/*
 			 * Use this if the json file has unicode values
 			 * using the UTF-8 format */
@@ -39,13 +56,12 @@ function create_glyph_grid() {
 				list.push('<a id="' + character + '" href="#' + character + '" data-glyph="' + character + '">' + character + '</a>');
 			}
 		}
-		
 		list.push('</article>');	
 	}
-	
 	document.getElementById('glyphs').innerHTML = list.join('');
 	window.scroll({top: 0, left: 0, behavior: 'smooth'});
 }
+
 
 // Choose a different font
 function chooseFont() {
@@ -54,6 +70,7 @@ function chooseFont() {
 	document.getElementById("glyph").style.fontWeight = chosenFont;
 }
 
+
 // Display the chosen glyph
 function showGlyph(event) {
 	event.preventDefault(); 
@@ -61,15 +78,3 @@ function showGlyph(event) {
 	var glyph = document.getElementById('glyph');
 	glyph.innerHTML = current;
 }
-
-// Listen for button hovers/clicks
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.glyphs a').forEach(function(anchor) {
-		
-		anchor.addEventListener('mouseover', showGlyph);
-		anchor.addEventListener('mouseclick', showGlyph);
-
-	});	
-});
-
-create_glyph_grid();

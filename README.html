@@ -7,15 +7,54 @@
 
 <h1 id="glyphviewer">Glyph Viewer</h1>
 
-<p>A little tool to view all the glyphs in a font file.</p>
+<p>A website viewing tool for all the glyphs in a font file. It uses a json file with glyph unicodes to read all the glyphs and create a grid on the page. Javascript is used to convert the unicode to readable glyphs and showing a larger version of the glyph on tap/click/hover.</p>
 
-<p>The glyphs live in a json file extracted from Glyphs App and contain all the glyphs that have unicode values, grouped by category (uppercase, lowercase, figures, etc.)</p>
+<p>It works on smaller viewports too, but there the chosen glyph opens up inline in the grid. On wide viewports it appears beside the grid.</p>
 
-<p>The json file is read with vanilla JavaScript and all glyphs are placed in a grid on the page. On desktop a large version of a glyph is shown on the side when you hover over the grid of glyphs. On mobile the larger version opens up inline in the grid when you tap/click on a glyph in the grid.</p>
+<h2 id="requirements">Requirements</h2>
+
+<p>A json file with unicodes divided into categories (uppercase, lowercase, figures, etc.).</p>
+
+<pre><code>	{
+		&quot;category&quot;: &quot;Symbol&quot;, 
+		&quot;chars&quot;: [&quot;@&quot;, &quot;&amp;&quot;, &quot;\u00a9&quot;, &quot;\u00ae&quot;, &quot;\u2122&quot;, &quot;|&quot;]
+	}, 
+</code></pre>
+
+<p>or</p>
+
+<pre><code>	{
+		&quot;category&quot;: &quot;Symbol&quot;,
+		&quot;chars&quot;: [
+			&quot;0026&quot;,&quot;0040&quot;,&quot;007C&quot;,&quot;00A6&quot;,&quot;00A7&quot;,&quot;00A9&quot;,&quot;2117&quot;,&quot;00AE&quot;,&quot;00B0&quot;,&quot;00B6&quot;,&quot;2020&quot;,&quot;2021&quot;,&quot;2032&quot;,&quot;2033&quot;,&quot;2105&quot;,&quot;2113&quot;,&quot;2116&quot;,&quot;2118&quot;,&quot;211E&quot;,&quot;2122&quot;,&quot;2125&quot;,&quot;212E&quot;,&quot;214A&quot;,&quot;2423&quot;,&quot;0025&quot;,&quot;002B&quot;,&quot;003C&quot;,&quot;003D&quot;,&quot;003E&quot;,&quot;007E&quot;,&quot;00AC&quot;,&quot;00B1&quot;,&quot;005E&quot;,&quot;00B5&quot;,&quot;00D7&quot;,&quot;00F7&quot;,&quot;2030&quot;,&quot;2031&quot;,&quot;2052&quot;,&quot;207A&quot;,&quot;207B&quot;,&quot;207C&quot;,&quot;208A&quot;,&quot;208B&quot;,&quot;208C&quot;,&quot;2126&quot;,&quot;2127&quot;,&quot;2135&quot;,&quot;2136&quot;,&quot;2137&quot;,&quot;2138&quot;,&quot;2140&quot;,&quot;2141&quot;,&quot;2142&quot;,&quot;2143&quot;,&quot;2144&quot;,&quot;214B&quot;,&quot;2212&quot;
+		]
+	},
+</code></pre>
+
+<p>I extracted mine from Glyphs App with some Python. Link will follow to the repository with that code.</p>
+
+<h2 id="use">Use</h2>
+
+<h3 id="thefilesyouwillneed:">The files you will need:</h3>
+
+<ul>
+<li><code>assets/css/glyph-viewer.css</code></li>
+<li><code>assets/js/glyphs.json</code></li>
+<li><code>assets/js/glyph-viewer.js</code></li>
+</ul>
+
+<h3 id="html">HTML</h3>
+
+<ul>
+<li>From the index.html file copy <code>&lt;main class=&quot;module__glyphs&quot;&gt;</code> to your file. Use a different HTML element instead of <code>main</code> if that suits your setup better.</li>
+<li>Include the CSS file: <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;glyph-viewer.css&quot;&gt;</code></li>
+<li>Include the json file: <code>&lt;script src=&quot;glyphs.json&quot;&gt;&lt;/script&gt;</code></li>
+<li>Include the JavaScript file: <code>&lt;script src=&quot;glyph-viewer.js&quot;&gt;&lt;/script&gt;</code></li>
+</ul>
 
 <p>Cobbled together with the help of a whole load of websites and view source. Thank you everyone.</p>
 
-<p>You can view it in action here (link: https://jokedewinter.github.io/glyph-viewer/)</p>
+<p>You can view it in action here: https://jokedewinter.github.io/glyph-viewer/</p>
 
 </body>
 </html>

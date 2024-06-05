@@ -11,17 +11,8 @@ A json file with unicodes divided into categories (uppercase, lowercase, figures
 ```
 	{
 		"category": "Symbol", 
-		"chars": ["@", "&", "\u00a9", "\u00ae", "\u2122", "|"]
+		"chars": ["0040", "0026", "00A9", "00AE", "2122", "007C"]
 	}, 
-```
-or 
-```
-	{
-		"category": "Symbol",
-		"chars": [
-			"0026","0040","007C","00A6","00A7","00A9","2117","00AE","00B0","00B6","2020","2021","2032","2033","2105","2113","2116","2118","211E","2122","2125","212E","214A","2423","0025","002B","003C","003D","003E","007E","00AC","00B1","005E","00B5","00D7","00F7","2030","2031","2052","207A","207B","207C","208A","208B","208C","2126","2127","2135","2136","2137","2138","2140","2141","2142","2143","2144","214B","2212"
-		]
-	},
 ```
 
 I extracted mine from Glyphs App with some Python. Link will follow to the repository with that code.

@@ -27,18 +27,13 @@ function create_glyph_grid() {
 	
 			/*
 			 * Use this if the json file has unicode values
-			 * using the UTF-16 format */
-			//const character = String.fromCharCode(unicodeValue);	
-			
-			/*
-			 * Use this if the json file has unicode values
 			 * using the UTF-8 format */
-			//const character = String.fromCharCode(parseInt(unicodeValue, 16));		
+			const character = String.fromCharCode(parseInt(unicodeValue, 16));		
 	
 			/*
 			 * Use this if the json file has either string values
 			 * or unicodes from string values */
-			const character = unicodeValue; 
+			//const character = unicodeValue; 
 			
 			if ( character ) {
 				list.push('<a id="' + character + '" href="#' + character + '" data-glyph="' + character + '">' + character + '</a>');

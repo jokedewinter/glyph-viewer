@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Glyph Extractor</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f9f9f9; }
+        .controls { margin-bottom: 20px; background: white; padding: 15px; border-radius: 6px; border: 1px solid #ddd; }
+        .glyph-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 100px)); gap: 10px; }
+        .glyph-card { background: white; border: 1px solid #ddd; border-radius: 4px; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .glyph-name { font-size: 10px; color: #666; margin-top: 5px; text-align: center; word-break: break-all; }
+        canvas { border: 1px dashed #eee; }
+        .error-message { color: red; font-weight: bold; margin-top: 10px; }
+    </style>
+    <!-- Use the production distribution build of opentype.js -->
+    <script src="assets/js/opentype.js"></script>
+</head>
+<body>
+
+    <h2>Font Glyph Table Extractor</h2>
+    <div class="controls">
+        <label for="font-file">Select a Font File (.ttf, .otf, .woff): </label>
+        <input type="file" id="font-file" accept=".ttf,.otf,.woff">
+        <div id="error-log" class="error-message"></div>
+    </div>
+
+    <div id="grid" class="glyph-grid"></div>
+
+    <script>
+        document.getElementById('font-file').addEventListener('change', function(e) {
+            const errorLog = document.getElementById('error-log');
+            errorLog.innerText = ''; 
+            
+            const file = e.target.files[0];
+            if (!file) return;
+
+            // Block .woff2 files explicitly since they require a Brotli unpacker
+            if (file.name.endsWith('.woff2')) {
+                errorLog.innerText = 'Error: .woff2 files are compressed and not natively supported. Please use a .ttf or .otf file.';
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                try {
+                    const arrayBuffer = event.target.result;
+                    
+                    // Parse the raw ArrayBuffer directly
+                    const font = opentype.parse(arrayBuffer);
+                    
+                    // Check if the object initialized successfully
+                    if (!font || !font.glyphs) {
+                        throw new Error("The file loaded, but the font data structure could not be parsed.");
+                    }
+                    
+                    displayGlyphs(font);
+                } catch (err) {
+                    errorLog.innerText = 'Error parsing font: ' + err.message;
+                    console.error(err);
+                }
+            };
+            reader.readAsArrayBuffer(file);
+        });
+
+        function displayGlyphs(font) {
+            const grid = document.getElementById('grid');
+            grid.innerHTML = ''; 
+
+            // Use numGlyphs to find the exact count
+            for (let i = 0; i < font.numGlyphs; i++) {
+                // Correct API call: use .get(index) instead of drilling directly into an internal object
+                const glyph = font.glyphs.get(i);
+                if (!glyph) continue;
+
+                const card = document.createElement('div');
+                card.className = 'glyph-card';
+
+                const canvas = document.createElement('canvas');
+                canvas.width = 60;
+                canvas.height = 60;
+                const ctx = canvas.getContext('2d');
+
+                // Draw the glyph outlines safely onto the canvas matrix
+                glyph.draw(ctx, 10, 45, 40);
+
+                const label = document.createElement('div');
+                label.className = 'glyph-name';
+                label.innerText = `Index: ${i}\n${glyph.name || 'unnamed'}`;
+
+                card.appendChild(canvas);
+                card.appendChild(label);
+                grid.appendChild(card);
+            }
+        }
+    </script>
+</body>
+</html>

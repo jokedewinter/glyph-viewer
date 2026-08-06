@@ -13,11 +13,13 @@ A json file with the required information. Use the script `glyphs-script/jdw-gly
 ## Use
 
 ### The files you will need from this repository
+
 - `assets/css/glyph-viewer.css`
 - `assets/js/glyph-viewer.js` 
 
 ### HTML
 Add this to your html file:
+
 ```
     <section class="module__glyph_viewer">
         <div class="glyph_view">
@@ -31,8 +33,11 @@ Add this to your html file:
 ```
 
 Include the CSS file: `<link rel="stylesheet" href="glyph-viewer.css">`
+
 Include the JavaScript file: `<script src="glyph-viewer.js"></script>`
+
 Include the kickoff at the bottom of your html file: 
+
 ```
     <script>
         let response_promise = fetch('./NAME_OF_YOUR_JSON_FILE.json');

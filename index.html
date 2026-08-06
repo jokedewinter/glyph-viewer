@@ -1,55 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-	
-    <title>Glyph Viewer</title>
-    <meta name="description" content="Detail view of every glyph in a font.">
-    
-	<link rel="stylesheet" href="assets/css/screen.css">
-	<link rel="stylesheet" href="assets/css/glyph-viewer.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Glyph viewer</title>
+    <meta name="description" content="Detail view of every glyph in a font." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/screen.css?v=0.02">
+    <link rel="stylesheet" href="assets/css/glyph-viewer.css?v=0.05">
 </head>
 
 <body>
-
-<h1>Glyph viewer</h1>
-
-<main class="module__glyphs">
-	<figure class="glyph">
-		<!--
-		On page load display the first glyph.
-		After that, the thumbnail buttons do the work on hover/click.
-		-->
-		<div id="glyph">A</div>
-	</figure>
-			
-	<section class="glyphs">
-		<header>
-			<h2>Glyphset</h2>
-            <select id="selectFont" onchange="chooseFont()">
-                <option value="400" selected>Regular</option>
-                <option value="900">Black</option>
-            </select>
-        </header>
-		
-		<div id="glyphs" class="vscrolling">
-		</div>
-	</section>	
-</main>
-
-<footer class="site__footer">
-    <p>&copy; 2024 Joke De Winter. All Rights Reserved.</p>	
-</footer>
-
-<script src="assets/js/glyphs.json"></script>
-<script src="assets/js/glyph-viewer.js"></script>
-
+    <header>
+        <h1>Glyph viewer</h1>
+        <p>Show all glyphs in a font, generated from a json file</p>
+    </header>
+    
+    <section class="module__glyph_viewer">
+        <div class="glyph_view">
+            <figure id="glyph_box"></figure>
+            <div id="glyph_font"></div>
+            <div id="glyph_info"></div>
+        </div>
+        <section id="glyph_list" class="vscrolling">
+        </section>
+    </section>
+    
+    <footer>
+        <p>&copy; 2026 Joke De Winter. All rights reserved.</p>
+    </footer>
+    
+    <script src="assets/js/glyph-viewer.js?=v=0.03"></script>
+    <script>
+        let response_promise = fetch('./assets/json/Apium-demo_glyphs.json?v=0.01');
+        fetch_json(response_promise);
+    </script>
 </body>
 </html>
-
-
-
-
 

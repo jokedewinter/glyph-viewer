@@ -1,9 +1,0 @@
-// ---------------------------------
-// Rem output with px fallback
-// Going with plain pixel values for the $size setting
-// ----------------------------------------------------------
-
-@mixin font-size($size: 16) {
-	font-size: $size * 1px;
-	font-size: ($size / 10) * 1rem;
-}

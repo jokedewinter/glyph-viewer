@@ -1,0 +1,25 @@
+/* 
+ * Scrolling
+ * ---------------------------------------- */
+
+.vscrolling {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 75vh;
+    padding-bottom: 0.5em;
+    margin-bottom: 2em;
+}
+
+
+
+
+.vscrolling::-webkit-scrollbar { width: 5px; height: 5px; }
+.vscrolling::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px var(--col-border) !important;  background: var(--col-border); }
+.vscrolling::-webkit-scrollbar-thumb { background: var(--col-text); }
+.vscrolling::-webkit-scrollbar-thumb:hover { background: var(--col-text-light); }
+.vscrolling::-webkit-scrollbar:horizontal { display: none; }
+
+
+

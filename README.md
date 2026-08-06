@@ -1,23 +1,14 @@
 # Glyph Viewer
 
-A website viewing tool for all the glyphs in a font file. It uses a json file with glyph unicodes to read all the glyphs and create a grid on the page. Javascript is used to convert the unicode to readable glyphs and showing a larger version of the glyph on tap/click/hover.
+A viewing tool for all the glyphs in a font file. It uses a json file with all glyphs in a font to create a grid on the page. Javascript is used to read the json file and show a larger version of the glyph on tap/click/hover. There is a simple fallback for narrow viewports.
 
-It works on smaller viewports too, but there the chosen glyph opens up inline in the grid. On wide viewports it appears beside the grid.
+The json file is generated inside Glyphs. The first element is a dictionary containing the upm, the metrics (as averages of all the masters), and a list of active export instances. 
 
 You can view it in action here: https://jokedewinter.github.io/glyph-viewer/
 
 ## Requirements
 
-A json file with unicodes divided into categories (uppercase, lowercase, figures, etc.).
-
-```
-	{
-		"category": "Symbol", 
-		"chars": ["0040", "0026", "00A9", "00AE", "2122", "007C"]
-	}, 
-```
-
-I extracted mine from Glyphs App with some Python. Link will follow to the repository with that code.
+A json file with the required information. Use the script `glyphs-script/jdw-glyphset.py` in Glyphs to create the file. The json file will be saved to your desktop.
 
 ## Use
 
@@ -26,17 +17,32 @@ I extracted mine from Glyphs App with some Python. Link will follow to the repos
 - `assets/js/glyph-viewer.js` 
 
 ### HTML
-- From the index.html file copy the entire `<main class="module__glyphs">` block to your file. Use a different HTML element instead of `main` if that suits your setup better.
-- Include the CSS file: `<link rel="stylesheet" href="glyph-viewer.css">`
-- Include the json file: `<script src="glyphs.json"></script>`
-- Include the JavaScript file: `<script src="glyph-viewer.js"></script>`
-- Update the `select` element to include all the different fonts from your typeface, or remove it if you only have one font.
+Add this to your html file:
+```
+    <section class="module__glyph_viewer">
+        <div class="glyph_view">
+            <figure id="glyph_box"></figure>
+            <div id="glyph_font"></div>
+            <div id="glyph_info"></div>
+        </div>
+        <section id="glyph_list" class="vscrolling">
+        </section>
+    </section>
+```
 
-### JavaScript
-- The json file I am using is called `glyphs.json` and lives in `assets/js/`. If yours has a different filename in a different location, then remember to update name and link in `glyph-viewer.js`. 
+Include the CSS file: `<link rel="stylesheet" href="glyph-viewer.css">`
+Include the JavaScript file: `<script src="glyph-viewer.js"></script>`
+Include the kickoff at the bottom of your html file: 
+```
+    <script>
+        let response_promise = fetch('./NAME_OF_YOUR_JSON_FILE.json');
+        fetch_json(response_promise);
+    </script>
+```
 
 
 Cobbled together with the help of a whole load of websites and view source. Thank you everyone. 
+No AI was used in the process. 
 
 
  

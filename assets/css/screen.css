@@ -7,9 +7,175 @@
  * Year: 2026
  */
 
-@import "_fonts.css"; 
-@import "base/_root.css"; 
-@import "base/_global.css"; 
-@import "component/_typography.css"; 
-@import "component/_links.css"; 
+/* 
+ * Fonts from Spilling Type
+ * ---------------------------------------- */
+
+@font-face {
+  font-family: 'BloodyPandora';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/BloodyPandora/BloodyPandoraRegular.woff') format('woff'); 
+}
+
+@font-face {
+  font-family: 'BloodyPandora';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/BloodyPandora/BloodyPandoraBold.woff') format('woff'); 
+}
+
+@font-face {
+  font-family: 'Apium';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/apium/Apium-Regular.woff') format('woff'); 
+}
+
+@font-face {
+  font-family: 'Apium';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/apium/Apium-Bold.woff') format('woff'); 
+}
+
+@font-face {
+  font-family: 'Apium';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/apium/Apium-RegularItalic.woff') format('woff'); 
+}
+
+@font-face {
+  font-family: 'Apium';
+  font-style: italic;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/apium/Apium-BoldItalic.woff') format('woff'); 
+}
+
+
+/* 
+ * Custom properties
+ * --------------------------------- */
+
+:root {
+    --base: 5.5em;
+
+	--font: 'BloodyPandora', sans-serif;
+
+    --col-text: rgb(66, 67, 69); /* #424345;	*/		
+	--col-text-reverse: #fbfbf9;
+    --col-text-light: #A3A299;
+	--col-text-hover: #c8552b;
+	
+	--col-page: #fbfbf9;
+	--col-border: #e7e6df;
+}
+
+
+/* 
+ * Reset
+ * --------------------------------- */
+
+*, *:before, *:after { box-sizing: border-box;  }
+* { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -webkit-hyphens: none; -moz-hyphens: none !important; hyphens: none; }
+button, fieldset, input, textarea, select, fieldset { background: none; border: none; border-radius: 0px; outline: 0; -webkit-appearance: none; font-family: var(--font); }
+article, aside, footer, header, hgroup, main, nav, section { display: block; }
+nav ul, nav ol { padding: 0; }
+nav ul li, nav ol li { list-style: none; }
+nav ul a, nav ol a { border-bottom: none; }
+
+
+/* 
+ * Accessibility
+ * --------------------------------- */
+
+.screen-reader-text { clip: rect(1px, 1px, 1px, 1px); 	overflow: hidden; position: absolute !important; height: 1px; width: 1px; }
+
+
+/* 
+ * Site settings
+ * --------------------------------- */
+
+html { font-size: 62.5%; }
+
+body {
+	clear: both;
+	font-family: var(--font);
+	font-size: 1.8rem;
+	font-weight: normal;
+	line-height: 1.5;
+    background-color: var(--col-page);
+	color: var(--col-text);
+
+    width: 90%;
+	max-width: 80em; /* 1280px */
+	margin: 0 auto;
+    overflow-x: hidden;
+}
+
+body > * { position: relative; }
+
+footer {
+	margin-top: 1em;
+	padding-top: 1em;
+	border-top: 1px solid var(--col-border);
+}
+
+/* 
+ * Typography
+ * --------------------------------- */
+
+h1 { font-size: 7.2rem; }
+
+h2 {
+    font-size: 1.8rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding-bottom: calc(var(--base) / 9);
+}
+
+h3 {
+    font-size: 1.4rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding-top: 0.5em;
+	color: var(--col-text-light);
+}
+
+p {
+    font-size: 1.8rem;
+	padding-bottom: 9px;
+}
+
+
+@media screen and ( max-width: 37.49em ) {
+	
+	h1 {
+        font-size: 3.6rem;
+		margin: 0.5em 0;
+	}
+}
+
+/* 
+ * Links
+ * --------------------------------- */
+
+a {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+a:hover { color: var(--col-text-hover); }
+
 

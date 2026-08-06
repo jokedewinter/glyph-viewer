@@ -40,7 +40,7 @@ Include the kickoff at the bottom of your html file:
 
 ```
     <script>
-        let response_promise = fetch('./NAME_OF_YOUR_JSON_FILE.json');
+        let response_promise = fetch('NAME_OF_YOUR_JSON_FILE.json');
         fetch_json(response_promise);
     </script>
 ```

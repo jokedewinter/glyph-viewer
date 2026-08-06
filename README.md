@@ -43,6 +43,3 @@ Include the kickoff at the bottom of your html file:
 
 Cobbled together with the help of a whole load of websites and view source. Thank you everyone. 
 No AI was used in the process. 
-
-
- 

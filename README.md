@@ -40,6 +40,9 @@ Include the kickoff at the bottom of your html file:
     </script>
 ```
 
+### CSS
+Update the name of you font family at the top of `glyph-viewer.css`.
 
+## Thank you
 Cobbled together with the help of a whole load of websites and view source. Thank you everyone. 
 No AI was used in the process. 

@@ -4,7 +4,7 @@ A viewing tool for all the glyphs in a font file. It uses a json file with all g
 
 The json file is generated inside Glyphs. The first element is a dictionary containing the upm, the metrics (as averages of all the masters), and a list of active export instances. 
 
-You can view it in action here: https://jokedewinter.github.io/glyph-viewer/
+Demo: https://jokedewinter.github.io/glyph-viewer/
 
 ## Requirements
 

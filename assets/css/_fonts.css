@@ -3,6 +3,22 @@
  * ---------------------------------------- */
 
 @font-face {
+  font-family: 'BloodyPandora';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/BloodyPandora/BloodyPandoraRegular.woff') format('woff'); 
+}
+
+@font-face {
+  font-family: 'BloodyPandora';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/BloodyPandora/BloodyPandoraBold.woff') format('woff'); 
+}
+
+@font-face {
   font-family: 'Apium';
   font-style: normal;
   font-weight: 400;

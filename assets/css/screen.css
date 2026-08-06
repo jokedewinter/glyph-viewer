@@ -7,23 +7,7 @@
  * Year: 2026
  */
 
-
-@font-face {
-  font-family: 'BloodyPandora';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''),
-       url('../fonts/BloodyPandora/BloodyPandora-003-Regular.woff') format('woff'); 
-}
-
-@font-face {
-  font-family: 'BloodyPandora';
-  font-style: normal;
-  font-weight: 700;
-  src: local(''),
-       url('../fonts/BloodyPandora/BloodyPandora-003-Bold.woff') format('woff'); 
-}
-
+@import "_fonts.css"; 
 @import "base/_root.css"; 
 @import "base/_global.css"; 
 @import "component/_typography.css"; 

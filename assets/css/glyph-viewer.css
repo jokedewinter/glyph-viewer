@@ -58,9 +58,10 @@
     position: absolute;
     height: 100%;
     /* 
-     * Placing the top of the glyph at -21px puts it on the baseline
-     * No idea why it is -21, but fiddling with web inspector suggested 21 */
-    top: -21px;
+     * Placing the top of the glyph at -30px puts it on the baseline
+     * No idea why it is -30, but fiddling with web inspector suggested 30 
+     * A different typeface will have a different value here */
+    top: -30px;
     z-index: 100;
 }
 

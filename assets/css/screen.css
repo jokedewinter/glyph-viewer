@@ -28,36 +28,29 @@
 }
 
 @font-face {
-  font-family: 'Apium';
+  font-family: 'Ceruza';
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/apium/Apium-Regular.woff') format('woff'); 
+       url('../fonts/CeruzaMicro/Ceruza-Micro-Regular.woff') format('woff'); 
 }
 
 @font-face {
-  font-family: 'Apium';
+  font-family: 'Ceruza';
   font-style: normal;
   font-weight: 700;
   src: local(''),
-       url('../fonts/apium/Apium-Bold.woff') format('woff'); 
+       url('../fonts/CeruzaMicro/Ceruza-Micro-Bold.woff') format('woff'); 
 }
 
 @font-face {
-  font-family: 'Apium';
+  font-family: 'Ceruza';
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('../fonts/apium/Apium-RegularItalic.woff') format('woff'); 
+       url('../fonts/CeruzaMicro/Ceruza-Micro-Italic.woff') format('woff'); 
 }
 
-@font-face {
-  font-family: 'Apium';
-  font-style: italic;
-  font-weight: 700;
-  src: local(''),
-       url('../fonts/apium/Apium-BoldItalic.woff') format('woff'); 
-}
 
 
 /* 

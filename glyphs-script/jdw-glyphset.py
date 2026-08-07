@@ -113,10 +113,6 @@ def create_this_glyph(glyph, css) :
             glyph_components = parent_string + ' + ' + css
             
             glyph_info = glyph.name, parent_string, parent_info.unicodeChar(), unicodedata.name(parent_string).title(), glyph_components
-                
-        else :
-            print("-> it has parts", glyph.name)
-            glyph_info = ""
             
     else :
         glyph_info = glyph.name, glyph.string, glyph.unicodeChar(), unicodedata.name(glyph.string).title(), ''
@@ -150,6 +146,7 @@ ligatureList = []
 styleset = ''
 thisStyleset = {}
 stylesList = []
+
 
 
 # ----------------------------------------------------
@@ -348,12 +345,12 @@ for thing in Glyphs.font.glyphs:
             currentCSSClass = currentStyleSet
             for feature in Font.features :
                 #print(feature.name)
-                currentStyleSet_label = feature.name
-                """
                 if ( feature.name == currentStyleSet) :
+                    currentStyleSet_label = feature.name
+                    """
                     for label in feature.labels() :
                         currentStyleSet_label = label.value
-                """
+                    """
                         
             # If this is a new stylistic set, create a new group
             if ( currentStyleSet != styleset ) :
